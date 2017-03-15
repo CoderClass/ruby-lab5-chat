@@ -1,8 +1,19 @@
 <h1>Chat</h1>
 
 <%= form_for Message.new do |f|%>
-  <%= f.text_field :body, placeholder: "Message..." %>
+  <label>
+    <%= f.text_field :body, placeholder: "Type something..." %>
+    HTTP style
+  </label>
 <% end %>
+
+<form id="js-socket">
+  <label>
+    <input type="text" placeholder="Type something..." />
+    WebSocket Style
+  </label>
+</form>
+
 
 <div class="messages">
   <%= render @messages %>
