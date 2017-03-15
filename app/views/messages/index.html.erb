@@ -1,0 +1,9 @@
+<h1>Chat</h1>
+
+<%= form_for Message.new do |f|%>
+  <%= f.text_field :body, placeholder: "Message..." %>
+<% end %>
+
+<div class="messages">
+  <%= render @messages %>
+</div>
